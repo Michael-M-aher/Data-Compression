@@ -1,8 +1,8 @@
 from Tag import TagLZW
 
 
-def lzw_compress():
-    txt = input("Enter the text to be compressed: ")
+def lzw_compress(txt):
+    # txt = input("Enter the text to be compressed: ")
     asciiDict = {chr(i): i for i in range(128)}
     pos = 127
     decodedtxt = [*txt]
@@ -24,8 +24,8 @@ def lzw_compress():
     print(*encodedtxt, sep=" , ")
 
 
-def lzw_decompress():
-    txt = input("Enter the compressed text: ")
+def lzw_decompress(txt):
+    # txt = input("Enter the compressed text: ")
     asciiDict = {i: chr(i) for i in range(128)}
     curpos = 128
     encodedtxt = txt.split(' , ')

@@ -1,8 +1,8 @@
 from Tag import TagLZ78
 
 
-def lz78_compress():
-    txt = input("Enter the text to be compressed: ")
+def lz78_compress(txt):
+    # txt = input("Enter the text to be compressed: ")
     dictionary = {}
     pos = 0
     decodedtxt = [*txt]
@@ -28,8 +28,8 @@ def lz78_compress():
     print(*encodedtxt, sep=" , ")
 
 
-def lz78_decompress():
-    txt = input("Enter the compressed text: ")
+def lz78_decompress(txt):
+    # txt = input("Enter the compressed text: ")
     dictionary = {}
     curpos = 1
     encodedtxt = txt.split(' , ')

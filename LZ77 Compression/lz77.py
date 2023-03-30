@@ -20,10 +20,10 @@ def find_match(text, window_size, lookahead_size, i):
     return best_match
 
 
-def lz77_compress():
-    text = input("Enter the text to be compressed: ")
-    window_size = int(input("Enter the window size: "))
-    lookahead_size = int(input("Enter the lookahead size: "))
+def lz77_compress(text, window_size, lookahead_size):
+    # text = input("Enter the text to be compressed: ")
+    # window_size = int(input("Enter the window size: "))
+    # lookahead_size = int(input("Enter the lookahead size: "))
     compressed = []
     i = 0
     while i < len(text):
@@ -37,8 +37,8 @@ def lz77_compress():
     return compressed
 
 
-def lz77_decompress():
-    compressed = input("Enter the compressed text: ")
+def lz77_decompress(compressed):
+    # compressed = input("Enter the compressed text: ")
     encodedtxt = compressed.split(' , ')
     decodedtxt = ''
     for i in range(0, len(encodedtxt)):
